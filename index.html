@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="Ru En">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto Russia</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+    
+    <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Логотип Mesto Russia">
+    </header>
+
+    <main class="content">
+        <section class="profile">
+            <img class="profile__avatar" src="./images/image.png" alt="Аватар профайла">
+            <div class="profile__info">
+                <h1 class="profile__title">Жак-Ив Кусто</h1>
+                <button type="button" class="profile__editbutton"></button>
+                <p class="profile__subtitle">Исследователь океана</p>
+            </div>
+            <button type="button" class="profile__addbutton"></button>
+        </section>
+
+        <section class="elements">
+            <div class="element">
+                <img class="element__image" src="./images/karachaevsk.png" alt="Фото из Карачаевска">
+                <div class="element__group">
+                    <h2 class="element__name">Карачаевск</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/elbrus.png" alt="Фото горы Эльбрус">
+                <div class="element__group">
+                    <h2 class="element__name">Гора Эльбрус</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/dombai.png" alt="Фото из Домбая">
+                <div class="element__group">
+                    <h2 class="element__name">Домбай</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/elbrus.png" alt="Фото горы Эльбрус">
+                <div class="element__group">
+                    <h2 class="element__name">Гора Эльбрус</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/dombai.png" alt="Фото из Домбая">
+                <div class="element__group">
+                    <h2 class="element__name">Домбай</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+            <div class="element">
+                <img class="element__image" src="./images/karachaevsk.png" alt="Фото из Карачаево-Черкесии">
+                <div class="element__group">
+                    <h2 class="element__name">Карачаево-Черкесия</h2>
+                    <img class="element__like" src="./images/like.svg" alt="Поставить лайк">
+                </div>
+            </div>
+        </section>
+
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2023 Mesto Russia &#60;Alexey Odoevsky&#62;</p>
+    </footer>
+    
+    <section class="popup">
+        <div class="popup__container">
+            <button type="button" class="popup__close"></button>
+            <h2 class="popup__header">Редактировать профиль</h2>
+            <form class="popup__form" name="form">
+                <input type="text" class="popup__input popup__input-name" placeholder="Имя">
+                <input type="text" class="popup__input popup__input-about" placeholder="О себе">
+            </form>
+            <button type="submit" class="popup__save">Сохранить</button>
+        </div>
+    </section>
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.element__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 282px;
+    height: 79px;
+    margin: 0;
+    padding: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 320px) {
+    .element__group {
+        max-width: 90vw;
+    }
+}
