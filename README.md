@@ -9,12 +9,12 @@ CSS
 JS
 
 # Реализованные технологии:
-Адаптивная вёрстка
-FlexBox
-Grid Layout
-Media-запросы
-Организация файлов по БЭМ
+Адаптивная вёрстка,
+FlexBox,
+GridLayout,
+Media-запросы,
+Организация файлов по БЭМ,
 DOM
 
-Ссылка на проект:
-[]
+# Ссылка на проект:
+[https://odo-pro.github.io/mesto/index.html]
