@@ -1,17 +1,15 @@
 .header {
     max-width: 880px;
-    height: 74px;
     display: flex;
     flex-direction: row;
     justify-content: left;
     margin: 45px auto 0;
-    border-bottom: solid 1px #545454;
+    border-bottom: solid 1px rgba(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 320px) {
     .header {
         max-width: 320px;
-        height: 56px;
         margin: 28px 0 0;
     }
 }

@@ -3,13 +3,13 @@
     font-weight: 500;
     max-width: 720px;
     line-height: 48px;
-    margin: 0 0 16px;
+    margin: 0 0 9px;
 }
 
 @media screen and (max-width: 767px) {
     .profile__title {
         line-height: normal;
         font-size: 27px;
-        margin: 0 0 14px;
+        margin: 0 0 7px;
     }
 }
