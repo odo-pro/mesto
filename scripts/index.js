@@ -31,7 +31,7 @@ function handleFormSubmit (evt) {
   evt.preventDefault();
   nameTitle.textContent = nameInput.value;
   aboutSubtitle.textContent = aboutInput.value;
-  closePopup(formElement);
+  toggleOpenPopup(formElement);
 };
 
 

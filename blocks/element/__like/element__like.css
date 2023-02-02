@@ -2,14 +2,12 @@
     width: 22px;
     height: 19px;
     margin-right: 20px;
-    padding: 0;
     align-self: center;
     border-style: none;
     background-color: transparent;
     background-image: url(../../../images/like.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100%;
+    background-size: cover;
 }
 
 .element__like:hover {

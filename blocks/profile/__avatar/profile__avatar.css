@@ -3,6 +3,7 @@
     max-width: 120px;
     margin: 0;
     object-fit: contain;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     align-self: flex-start;
 }

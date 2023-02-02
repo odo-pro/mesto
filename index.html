@@ -25,7 +25,7 @@
             <button type="button" class="profile__add-button" aria-label="Добавить фото"></button>
         </section>
 
-        <section class="elements">
+        <section class="elements" aria-label="Фотографии пользователя">
             <article class="element">
                 <img class="element__image" src="./images/karachaevsk.png" alt="Фото из Карачаевска">
                 <div class="element__group">
@@ -72,7 +72,7 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__copyright">&copy;2023 Mesto Russia &#60;Alexey Odoevsky&#62;</p>
+        <p class="footer__copyright">&copy; 2023 Mesto Russia &#60;Alexey Odoevsky&#62;</p>
     </footer>
     
     <div class="popup">
@@ -80,8 +80,8 @@
             <button type="button" class="popup__close" aria-label="Закрыть окно редактирования"></button>
             <h2 class="popup__header">Редактировать профиль</h2>
             <form class="popup__form" name="form">
-                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" minlength="4" maxlength="20" required>
-                <input type="text" class="popup__input popup__input_type_about" placeholder="О себе" minlength="4" maxlength="30" required>
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="profilename" required>
+                <input type="text" class="popup__input popup__input_type_about" placeholder="О себе" name="profiledescription" required>
                 <button type="submit" class="popup__save">Сохранить</button>
             </form>
         </div>
