@@ -1,7 +1,4 @@
 .element__group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
     max-width: 282px;
     margin: 0;
@@ -13,6 +10,6 @@
 
 @media screen and (max-width: 320px) {
     .element__group {
-        max-width: 90vw;
+        max-width: 88.13vw;
     }
 }

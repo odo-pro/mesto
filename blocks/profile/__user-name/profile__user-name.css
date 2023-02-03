@@ -1,0 +1,16 @@
+.profile__user-name {
+    max-width: 336px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__user-name {
+        max-width: 282px;
+        justify-content: center;
+    }
+}

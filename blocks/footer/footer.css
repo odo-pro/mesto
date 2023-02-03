@@ -2,15 +2,24 @@
     max-width: 880px;
     width: 100%;
     margin: 66px auto 60px;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    box-sizing: border-box;
 
 }
 
 @media screen and (max-width: 879px) {
     .footer {
+        padding-left: 27px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
         max-width: 282px;
         margin: 48px auto 36px;
+        padding-left: 0;
     }
 }
