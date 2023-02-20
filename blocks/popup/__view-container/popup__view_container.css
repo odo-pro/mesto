@@ -1,0 +1,11 @@
+.popup__view_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    max-width: 75vw;
+    max-height: 75vh;
+    width: 100%;
+}
