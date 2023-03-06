@@ -22,6 +22,8 @@ const popupViewCloseButton = popupView.querySelector('.popup__close-view');
 const elementsGrid = document.querySelector('.elements');
 const template = document.querySelector('.element-template').content;
 
+const popupList = document.querySelectorAll('.popup');
+
 const initialCards = [
   {
     name: 'Архыз',
@@ -51,11 +53,27 @@ const initialCards = [
 
 const openPopup = (popup) => {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', handleEscClose);
 };
 
 const closePopup = (popup) => {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handleEscClose);
 };
+
+const handleEscClose = (evt) => {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  }
+};
+
+popupList.forEach(popup => {
+  popup.addEventListener('mousedown', (evt) => {
+    const targetClassList = evt.target.classList;
+    if(targetClassList.contains('popup') || targetClassList.contains('popup_close'))
+    closePopup(popup);
+  })
+});
 
 const handleFormEditSubmit = (evt) => {
   evt.preventDefault();
@@ -107,8 +125,12 @@ initialCards.forEach((item) => {
   elementsGrid.append(getBlock(item));
 });
 
-popupViewCloseButton.addEventListener('click', () => {
-  closePopup(popupView)
+const closeButtons = document.querySelectorAll('.popup__close');
+
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () =>
+  closePopup(popup));
 });
 
 editButton.addEventListener('click', () => {
@@ -117,18 +139,32 @@ editButton.addEventListener('click', () => {
   aboutInput.value = aboutSubtitle.textContent;
 });
 
-closeEditButton.addEventListener('click', () => {
-  closePopup(popupEdit);
-});
-
 formEditElement.addEventListener('submit', handleFormEditSubmit);
 
 addButton.addEventListener('click', () => {
   openPopup(popupAdd);
 });
 
-closeAddButton.addEventListener('click', () => {
-  closePopup(popupAdd);
-});
-
 formAddElement.addEventListener('submit', handleFormAddSubmit);
+
+const validationOptions = {
+  formSelector: '#form',
+  submitSelector: '.form__submit',
+  inputSelector: '.popup__input',
+  inputSectionSelector: '.popup__form',
+  inputErrorSelector: '.form__input-error',
+  inputErrorClass: 'form__input-error_active',
+  disabledButtonClass: 'popup__save_inactive',
+};
+
+enableValidation(validationOptions);
+
+const formPopup = document.forms.form;
+const submitButton = formPopup.querySelector('.popup__save');
+
+formPopup.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  console.log(formPopup);
+  formPopup.reset();
+  disableButton(submitButton, validationOptions.disabledButtonClass);
+});

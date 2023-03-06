@@ -40,10 +40,26 @@
         <div class="popup__container">
             <button type="button" class="popup__close popup__close-edit" aria-label="Закрыть окно редактирования"></button>
             <h2 class="popup__header popup__header-edit">Редактировать профиль</h2>
-            <form class="popup__form popup__form-edit" name="form">
-                <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="profilename" required>
-                <input type="text" class="popup__input popup__input_type_about" placeholder="О себе" name="profiledescription" required>
-                <button type="submit" class="popup__save popup__save-edit">Сохранить</button>
+            <form class="popup__form popup__form-edit" name="form" id="form" novalidate>
+                <input 
+                    type="text"
+                    class="popup__input popup__input_type_name"
+                    placeholder="Имя"
+                    name="profilename"
+                    minlength="2"
+                    maxlength="40"
+                    required>
+                <span class="profile-name-error form__input-error form__input-error_active"></span>
+                <input 
+                    type="text"
+                    class="popup__input popup__input_type_about"
+                    placeholder="О себе"
+                    name="profiledescription"
+                    minlength="2"
+                    maxlength="200"
+                    required>
+                <span class="form__input-error form__input-error_active profile-description-error"></span>
+                <button type="submit" class="popup__save popup__save-edit form__submit form__save_inactive">Сохранить</button>
             </form>
         </div>
     </div>
@@ -52,18 +68,32 @@
         <div class="popup__container">
             <button type="button" class="popup__close popup__close-add" aria-label="Закрыть окно добавления фото"></button>
             <h2 class="popup__header popup__header-add">Новое место</h2>
-            <form class="popup__form popup__form-add" name="form">
-                <input type="text" class="popup__input popup__input_type_placename" placeholder="Название" name="locationname" required>
-                <input type="text" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" name="photolink" required>
-                <button type="submit" class="popup__save popup__save-add">Создать</button>
+            <form class="popup__form popup__form-add" name="form" id="form" novalidate>
+                <input 
+                    type="text"
+                    class="popup__input popup__input_type_placename"
+                    placeholder="Название"
+                    name="locationname"
+                    minlength="2"
+                    maxlength="30"
+                    required>
+                <span class="location-name-error form__input-error form__input-error_active"></span>
+                <input 
+                    type="url"
+                    class="popup__input popup__input_type_link"
+                    placeholder="Ссылка на картинку"
+                    name="photolink"
+                    required>
+                <span class="location-name-error form__input-error form__input-error_active"></span>
+                <button type="submit" class="popup__save popup__save-add form__submit form__save_inactive">Создать</button>
             </form>
         </div>
     </div>
 
     <div class="popup popup_view">
         <div class="popup__view-container">
-            <img class="popup__image-view" src="#" alt="#">
             <button type="button" class="popup__close popup__close-view" aria-label="Закрыть окно просмотра фото"></button>
+            <img class="popup__image-view" src="#" alt="#">
             <h2 class="popup__image-header-view"></h2>
         </div>
     </div>
@@ -81,6 +111,7 @@
         </article>
     </template>
 
+    <script src="./scripts/validate.js"></script>
     <script src="./scripts/index.js"></script>
 
 </body>
