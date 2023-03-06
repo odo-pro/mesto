@@ -148,7 +148,7 @@ addButton.addEventListener('click', () => {
 formAddElement.addEventListener('submit', handleFormAddSubmit);
 
 const validationOptions = {
-  formSelector: '#form',
+  formSelector: '.popup__container',
   submitSelector: '.form__submit',
   inputSelector: '.popup__input',
   inputSectionSelector: '.popup__form',
