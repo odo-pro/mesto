@@ -151,7 +151,7 @@ const validationOptions = {
   formSelector: '.popup__container',
   submitSelector: '.form__submit',
   inputSelector: '.popup__input',
-  inputSectionSelector: '.popup__form',
+  inputSectionSelector: '.form',
   inputErrorSelector: '.form__input-error',
   inputErrorClass: 'form__input-error_active',
   disabledButtonClass: 'popup__save_inactive',
