@@ -5,14 +5,14 @@ const nameTitle = document.querySelector('.profile__title');
 const aboutSubtitle = document.querySelector('.profile__subtitle');
 const popupEdit = document.querySelector('.popup_edit');
 const formEditElement = document.querySelector('.popup__form-edit');
-const closeEditButton = popupEdit.querySelector('.popup__close-edit');
+const buttonCloseEdit = popupEdit.querySelector('.popup__close-edit');
 
 const addButton = document.querySelector('.profile__add-button');
 const placeNameInput = document.querySelector('.popup__input_type_placename');
 const linkInput = document.querySelector('.popup__input_type_link');
 const formAddElement = document.querySelector('.popup__form-add');
 const popupAdd = document.querySelector('.popup_add');
-const closeAddButton = popupAdd.querySelector('.popup__close-add');
+const buttonCloseAdd = popupAdd.querySelector('.popup__close-add');
 
 const popupView = document.querySelector('.popup_view');
 const popupViewName = popupView.querySelector('.popup__image-header-view');
@@ -23,33 +23,6 @@ const elementsGrid = document.querySelector('.elements');
 const template = document.querySelector('.element-template').content;
 
 const popupList = document.querySelectorAll('.popup');
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 const openPopup = (popup) => {
   popup.classList.add('popup_opened');
@@ -146,25 +119,3 @@ addButton.addEventListener('click', () => {
 });
 
 formAddElement.addEventListener('submit', handleFormAddSubmit);
-
-const validationOptions = {
-  formSelector: '.popup__container',
-  submitSelector: '.form__submit',
-  inputSelector: '.popup__input',
-  inputSectionSelector: '.form',
-  inputErrorSelector: '.form__input-error',
-  inputErrorClass: 'form__input-error_active',
-  disabledButtonClass: 'popup__save_inactive',
-};
-
-enableValidation(validationOptions);
-
-const formPopup = document.forms.form;
-const submitButton = formPopup.querySelector('.popup__save');
-
-formPopup.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-  console.log(formPopup);
-  formPopup.reset();
-  disableButton(submitButton, validationOptions.disabledButtonClass);
-});
