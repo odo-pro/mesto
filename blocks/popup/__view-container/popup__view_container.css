@@ -1,9 +1,10 @@
-.popup__view_container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
-    width: 100%;
+.popup__view-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 25px rgb(0 0 0 / 15%);
 }
