@@ -67,7 +67,7 @@ const toggleButtonState = (selectors, inputList, buttonElement) => {
   }
 };
 
-const resetErrorForm = (selectors, formElement) => {
+const resetValidation = (selectors, formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(selectors.inputSelector));
   const buttonElement = formElement.querySelector(selectors.submitSelector);
 

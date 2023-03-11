@@ -1,4 +1,4 @@
-const editButton = document.querySelector(".profile__edit-button");
+const buttonEditProfile = document.querySelector(".profile__edit-button");
 const nameInput = document.querySelector(".popup__input_type_name");
 const aboutInput = document.querySelector(".popup__input_type_about");
 const nameTitle = document.querySelector(".profile__title");
@@ -7,7 +7,7 @@ const popupEdit = document.querySelector(".popup_edit");
 const formEditElement = document.querySelector(".popup__form-edit");
 const buttonCloseEdit = popupEdit.querySelector(".popup__close-edit");
 
-const addButton = document.querySelector(".profile__add-button");
+const buttonAddCard = document.querySelector(".profile__add-button");
 const placeNameInput = document.querySelector(".popup__input_type_placename");
 const linkInput = document.querySelector(".popup__input_type_link");
 const formAddElement = document.querySelector(".popup__form-add");
@@ -97,27 +97,26 @@ initialCards.forEach((item) => {
   elementsGrid.append(getBlock(item));
 });
 
-const closeButtons = document.querySelectorAll(".popup__close");
+const popupsCloseButtons = document.querySelectorAll(".popup__close");
 
-closeButtons.forEach((button) => {
+popupsCloseButtons.forEach((button) => {
   const popup = button.closest(".popup");
   button.addEventListener("click", () => closePopup(popup));
 });
 
-editButton.addEventListener("click", () => {
+buttonEditProfile.addEventListener("click", () => {
   openPopup(popupEdit);
   nameInput.value = nameTitle.textContent;
   aboutInput.value = aboutSubtitle.textContent;
-
-  resetErrorForm(selectors, formEditElement);
+  resetValidation(selectors, formEditElement);
 });
 
 formEditElement.addEventListener("submit", handleFormEditSubmit);
 
-addButton.addEventListener("click", () => {
+buttonAddCard.addEventListener("click", () => {
   openPopup(popupAdd);
   formAddElement.reset();
-  resetErrorForm(selectors, formAddElement);
+  resetValidation(selectors, formAddElement);
 });
 
 formAddElement.addEventListener("submit", handleFormAddSubmit);
