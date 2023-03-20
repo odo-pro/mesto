@@ -103,7 +103,7 @@ buttonEditProfile.addEventListener("click", () => {
   openPopup(popupEdit);
   nameInput.value = nameTitle.textContent;
   aboutInput.value = aboutSubtitle.textContent;
-  FormValidator.formEditElement.resetValidation();
+  validationFormEdit.resetValidation();
 });
 
 formEditElement.addEventListener("submit", handleFormEditSubmit);
@@ -111,7 +111,7 @@ formEditElement.addEventListener("submit", handleFormEditSubmit);
 buttonAddCard.addEventListener("click", () => {
   openPopup(popupAdd);
   formAddElement.reset();
-  FormValidator.formAddElement.resetValidation();
+  validationFormAdd.resetValidation();
 });
 
 formAddElement.addEventListener("submit", handleFormAddSubmit);
